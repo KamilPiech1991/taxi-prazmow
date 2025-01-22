@@ -94,8 +94,13 @@
     transition: all .35s cubic-bezier(.79,0,.07,.88);
   }
 
+  .button-app {
+    margin-right: 10px;
+  }
+
   .button-app img {
-    height: 68px;
+    height: 58px;
+    width: auto;
   }
   
   @keyframes pencilWrite { 
