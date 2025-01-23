@@ -4117,13 +4117,13 @@
 }
 :root, .light {
   --color-accent-1: #2999d6;
-  --color-accent-2: #55bcf4;
+  --color-accent-2: #005999;
   --color-dark-1: #000e23;
   --color-dark-2: #131227;
   --color-dark-3: #000e23;
   --color-light-1: #fdfdfd;
   --color-light-2: #f7f7f7;
-  --color-light-3: #ffffff;
+  --color-light-3: #b6b6b6;
   --color-heading: #11233e;
   --color-text: #47586b;
   --color-border: #74787b87;
@@ -4246,6 +4246,23 @@ video {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.bt-list li {
+  position: relative;
+  margin-bottom: 0.5em;
+  list-style: none;
+}
+
+.bt-list li::before {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: -30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent-1);
 }
 
 .transition-fade {
@@ -4898,7 +4915,7 @@ html.lenis, html.lenis body {
   text-transform: uppercase;
   letter-spacing: 1px;
   background: var(--color-accent-1);
-  background: linear-gradient(0deg, var(--color-accent-1) 0%, var(--color-accent-2) 100%);
+  background: linear-gradient(0deg, var(--color-accent-2) 0%, var(--color-accent-1) 100%);
   color: #fff;
   cursor: pointer;
 }
