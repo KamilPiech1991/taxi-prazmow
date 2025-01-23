@@ -1,13 +1,183 @@
-<section class="pt-small pb-small bg-dark-3">
+
+
+<section class="pt-medium pb-medium bg-dark-3">
     <div class="container">
-        <div class="map-wrap rounded-md p-4">
+        <div class="map-wrap rounded-md p-4 d-none">
             <img src="/assets/img/map.svg" alt="">
         </div>
+
+        <div id="map"></div>
+
     </div>
 </section>
 
 <style>
+    #map {
+  width: 100%;
+  height: 600px;
+}
+    .leaflet-container {
+        border-radius: 25px;
+        overflow: hidden;
+    }
     .map-wrap img {
         opacity: .5;
     }
 </style>
+
+
+
+<!-- Dołączamy skrypt Leaflet -->
+<script
+  src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js">
+</script>
+
+<script>
+    // 1. Inicjalizacja mapy
+    const map = L.map('map').setView([52.0, 21.0], 10);
+  
+    // 2. Warstwa kafelkowa (OpenStreetMap)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
+      minZoom: 5,
+      maxZoom: 50,
+      attribution: 'Bluuetaxi',
+    }).addTo(map);
+  
+    // 3. PRZYKŁADOWE poligony (fikcyjne granice) miejscowości:
+    const miejscowosciGeoJSON = {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": { "name": "Piaseczno" },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [21.00, 52.05],
+              [21.07, 52.05],
+              [21.07, 52.10],
+              [21.00, 52.10],
+              [21.00, 52.05]
+            ]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": { "name": "Zalesie Górne" },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [21.08, 52.01],
+              [21.14, 52.01],
+              [21.14, 52.06],
+              [21.08, 52.06],
+              [21.08, 52.01]
+            ]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": { "name": "Prażmów" },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [21.10, 51.90],
+              [21.18, 51.90],
+              [21.18, 51.97],
+              [21.10, 51.97],
+              [21.10, 51.90]
+            ]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": { "name": "Góra Kalwaria" },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [21.15, 51.98],
+              [21.22, 51.98],
+              [21.22, 52.05],
+              [21.15, 52.05],
+              [21.15, 51.98]
+            ]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": { "name": "Grójec" },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [20.80, 51.80],
+              [20.90, 51.80],
+              [20.90, 51.90],
+              [20.80, 51.90],
+              [20.80, 51.80]
+            ]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": { "name": "Tarczyn" },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [20.90, 51.95],
+              [21.00, 51.95],
+              [21.00, 52.00],
+              [20.90, 52.00],
+              [20.90, 51.95]
+            ]]
+          }
+        }
+      ]
+    };
+  
+ /*
+    const poligonyLayer = L.geoJSON(miejscowosciGeoJSON, {
+      style: function(feature) {
+        return {
+          color: '#005999',     
+          weight: 1,           
+          fillColor: '#2999d6', 
+          fillOpacity: 0.2      
+        };
+      },
+      onEachFeature: function(feature, layer) {
+        const name = feature.properties.name || 'Nieznana';
+        layer.bindPopup(`<strong>${name}</strong>`);
+      }
+    }).addTo(map);
+
+    */
+  
+    // 5. Dodajemy markery z nazwami (również przykładowe, przybliżone współrzędne)
+    //    Możesz je zmienić na bardziej dokładne
+    const miejscowosciMarkery = [
+      { name: "Piaseczno",       coords: [52.075, 21.02] },
+      { name: "Zalesie Górne",  coords: [52.03, 21.11] },
+      { name: "Prażmów",        coords: [51.94, 21.14] },
+      { name: "Góra Kalwaria",  coords: [52.00, 21.20] },
+      { name: "Grójec",         coords: [51.86, 20.90] },
+      { name: "Tarczyn",        coords: [51.98, 20.88] }
+    ];
+  
+    // Tworzymy warstwę FeatureGroup na markery (żeby móc potem fitBounds łącznie z poligonami)
+    const markeryLayer = L.featureGroup();
+  
+    miejscowosciMarkery.forEach(loc => {
+      L.marker(loc.coords)
+        .bindPopup(`<strong>${loc.name}</strong>`)
+        .addTo(markeryLayer);
+    });
+  
+    markeryLayer.addTo(map);
+  
+    // 6. Dopasowujemy widok do WSZYSTKICH obiektów (poligonów i markerów)
+    //    Tworzymy FeatureGroup z warstw, które chcemy objąć
+    const allLayersGroup = L.featureGroup([poligonyLayer, markeryLayer]);
+    map.fitBounds(allLayersGroup.getBounds());
+  
+    // KONIEC
+  </script>

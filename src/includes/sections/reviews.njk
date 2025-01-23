@@ -2,16 +2,16 @@
 <div class="pt-small pb-small pb-md-medium rounded-xl bg-light-2">
     <div class="container">
         <div class="col-md-6 mx-auto text-center mb-5">
-            <p class="handwrite-md my-0 fade-in">Zobacz</p>
-            <h2 class="h1 mt-0 split-lines">
+            <p class="my-0 color-accent-1 fade-in">Zobacz</p>
+            <h2 class="h1 mt-2 split-lines">
                 Opinie klientów
             </h2>
             <p class="split-lines">
-                Opinie są wiarygodne, wystawili je klienci, którzy skorzystali z moich usług. Wszystkie pochodzą z Google.
+                Opinie są wiarygodne, wystawili je klienci, którzy skorzystali z naszych usług. Wszystkie pochodzą z Google.
             </p>
         </div>
         <div class="row g-3">
-            {% for post in collections.reviews.slice(0, 12)%}
+            {% for post in collections.reviews.slice(0, 9)%}
                 <div class="col-md-6 col-xl-4 fade-in">
                     <div class="rounded-md shadow-1 p-4 bg-light-1">
                     <div class="review-card d-md-flex flex-column justify-content-between h-100">
