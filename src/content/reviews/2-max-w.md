@@ -1,7 +1,7 @@
 ---
-title: Maksymilian Wesołowski
-client: Agencja Cosmos
-review:  Szczerze polecam Usługi Pana Przemysława. Profesjonalne podejście i kontakt sprawiły, że zostanę jako Klient na długo.
+title: Lorem ipsum dolor
+client: Lorem ipsum dolor
+review:  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 avatar: /content/reviews/img/cl-max.webp
 addate: 12.03.2024
 order: 2

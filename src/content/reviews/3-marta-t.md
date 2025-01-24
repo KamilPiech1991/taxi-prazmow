@@ -1,7 +1,7 @@
 ---
-title: Marta Tomaszewska
-client: Nail Design
-review: Szybka realizacja w oparciu o najnowsze trendy, kreatywność, dostępność i doradztwo. Jestem bardzo zadowolona.
+title: Lorem ipsum dolor
+client: Lorem ipsum dolor
+review: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 avatar: /content/reviews/img/cl-marta.webp
 addate: 12.03.2024
 order: 3

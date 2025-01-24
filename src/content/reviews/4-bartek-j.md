@@ -1,7 +1,7 @@
 ---
-title: Bartek Janczewski
-client: Systemy alarmowe
-review: Zawsze gotowy do pomocy – nie tylko doskonale radzi sobie z problemami, ale również oferuje kreatywne rozwiązania.
+title: Lorem ipsum dolor
+client: Lorem ipsum dolor
+review: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 avatar: /content/reviews/img/cl-bartek.webp
 addate: 12.03.2024
 order: 4
