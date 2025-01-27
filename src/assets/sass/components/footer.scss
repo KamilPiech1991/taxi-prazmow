@@ -26,3 +26,15 @@
 .btn-footer img {
     height: 38px;
 }
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-list li {
+    margin-bottom: .5em;
+    font-size: 85%;
+    list-style: none;
+    color: var(--color-light-2);
+    opacity: .75;
+}

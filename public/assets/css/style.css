@@ -4615,7 +4615,6 @@ h6,
 small,
 .small {
   font-size: var(--fs-sm);
-  line-height: 1.4;
 }
 
 blockquote {
@@ -5397,6 +5396,18 @@ html.lenis, html.lenis body {
 
 .btn-footer img {
   height: 38px;
+}
+
+.footer-list {
+  padding-left: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.5em;
+  font-size: 85%;
+  list-style: none;
+  color: var(--color-light-2);
+  opacity: 0.75;
 }
 
 .work-image-wrap img {
