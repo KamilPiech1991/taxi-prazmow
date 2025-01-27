@@ -22,8 +22,8 @@
           </defs>
         </svg>
       </div>
-      <h1 class="xl mt-3 mb-4 split-lines">Zamów taksówkę<br/>przez aplikację mobilną</h1>
-      <p class="col-lg-10 mt-4 split-lines">
+      <h1 class="xl mt-3 mb-4 split-lines color-light-1">Taxi Prażmów - zamów<br/>przez aplikację mobilną</h1>
+      <p class="col-lg-10 mt-4 split-lines color-light-2">
         Pobierz najnowszą aplikację mobilną ze swojego sklepu z aplikacjami – instaluj tylko aplikacje z oryginalnych sklepów.
       </p>
       <div class="d-flex mt-3">
@@ -45,10 +45,22 @@
 
 <style>
   .hero {
+    position: relative;
     background-image: url(/assets/img/prazmow.png);
     background-size: cover;
-    background-color: #f7f7f7d1;
-    background-blend-mode: color-dodge;
+  }
+  .hero::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-accent-1);
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    opacity: .8;
+    z-index: -1;
   }
   .hero-svg {
     padding: .5em .6em .2em;
