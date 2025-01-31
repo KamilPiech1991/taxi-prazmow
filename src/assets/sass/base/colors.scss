@@ -12,7 +12,7 @@
     --color-text: #47586b;
     --color-border: #74787b87;
 }
-
+/*
 @media (prefers-color-scheme:dark) { 
     :root {
     --color-dark-1: #fdfdfd;
@@ -26,7 +26,7 @@
     --color-border: #74787b87;
     }
   }
-
+*/
   .bg-light-1 {
     background-color: var(--color-light-1)
   }
