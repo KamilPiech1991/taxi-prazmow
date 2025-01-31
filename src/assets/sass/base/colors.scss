@@ -5,6 +5,7 @@
     --color-dark-1: #000e23;
     --color-dark-2: #131227;
     --color-dark-3: #000e23;
+    --color-dark-4: #01070f;
     --color-light-1: #fdfdfd;
     --color-light-2: #f7f7f7;
     --color-light-3: #b6b6b6;
@@ -47,6 +48,9 @@
   }
   .bg-dark-3 {
     background-color: var(--color-dark-3)
+  }
+  .bg-dark-4 {
+    background-color: var(--color-dark-4)
   }
   .bg-accent-1 {
     background-color: var(--color-accent-1)

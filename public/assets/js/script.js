@@ -204,5 +204,51 @@ function appMain() {
 	handleSubmit('briefForm', '/wyslano-formularz');
 	handleSubmit('contactForm', '/wyslano-formularz');
 
+	if (document.querySelector('.swiper')) {
+		var swiper = new Swiper(".swiper", {
+		  grabCursor: true,
+		  slidesPerView: 1,
+		  spaceBetween: 22,
+		  lazyPreloadPrevNext: 1,
+		  centeredSlides: false,
+		  loop: true,
+		  pagination: {
+			el: ".swiper-pagination",
+			clickable: true
+		  },
+		  scrollbar: {
+			el: '.swiper-scrollbar',
+		  },
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		  autoplay: {
+			delay: 3000,
+		  },
+		  keyboard: {
+			enabled: true
+		  },
+		  mousewheel: false,
+		  breakpoints: {
+			460: {
+			  slidesPerView: 2
+			},
+			768: {
+			  slidesPerView: 2
+			},
+			991: {
+			  slidesPerView: 3
+			},
+			1024: {
+			  slidesPerView: 3
+			},
+			1200: {
+			  slidesPerView: 3
+			}
+		  }
+		});
+	  };
+
 // End
 };

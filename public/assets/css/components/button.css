@@ -103,7 +103,7 @@
 }
 
 .button-app img {
-  height: 58px;
+  height: 44px;
   width: auto;
   background: #fff;
   border-radius: 10px;
@@ -166,6 +166,106 @@
   fill: var(--color-accent-2);
 }
 
+.fixed-button {
+  position: fixed;
+  bottom: 23px;
+  left: 20px;
+  opacity: 0;
+  transform: translateY(100px);
+  visibility: hidden;
+  animation: 1s phoneFadeIn 2s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes phoneFadeIn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  30% {
+    transform: translateY(100px);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.fixed-phone {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 0.3em;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.0666666667);
+  background: #0a7cff;
+}
+
+.fixed-phone-icon {
+  display: inline-block;
+  margin-top: 3px;
+  margin-left: 4px;
+  width: 30px;
+  height: auto;
+  animation: phoneRing 1s infinite ease-in-out;
+}
+
+@keyframes phoneRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.fixed-phone-icon svg path {
+  fill: #fff;
+}
+
+.fixed-phone-number {
+  display: block;
+  position: absolute;
+  width: max-content;
+  top: 46%;
+  right: -12.3em;
+  transform: translateY(-50%) scale(0);
+  background: #fff;
+  padding: 0.8em 2em;
+  border-radius: 50px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.0666666667);
+  transition: 0.2s ease-in-out;
+  color: var(--color-accent-2);
+  font-weight: 700;
+}
+
+.fixed-phone:hover .fixed-phone-number {
+  transform: translateY(-50%) scale(1);
+}
+
 @media (min-width: 767px) {
   .button-anim:hover .button-anim-icon::before {
     transform: scale(1);
@@ -184,5 +284,8 @@
   }
   .button-anim:hover .button-anim-icon .icon-arrow {
     stroke: #fff;
+  }
+  .button-app img {
+    height: 58px;
   }
 }

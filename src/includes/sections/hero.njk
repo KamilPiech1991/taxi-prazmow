@@ -1,5 +1,5 @@
 <section class="bg-dark-3">
-<div class="pt-large pt-md-xxlarge pb-xxsmall pb-md-medium hero rounded-bottom-xl">
+<div class="pt-xlarge pt-md-xxlarge pb-small pb-md-medium hero rounded-bottom-xl">
   <div class="container">
     <div class="row">
     <div class="col-md-7 pb-xsmall pb-md-small">
@@ -27,7 +27,7 @@
         Pobierz najnowszą aplikację mobilną ze swojego sklepu z aplikacjami – instaluj tylko aplikacje z oryginalnych sklepów.
       </p>
       <div class="d-flex mt-3">
-        <a href="/" title="Zamów przejazd" class="button-anim btn-dark magnetic me-3 fade-in"
+        <a href="/" title="Zamów przejazd" class="button-anim btn-dark magnetic me-3 d-none d-md-flex fade-in"
         data-strength="40">
     <div class="button-anim-text">
   <span>Zamów przejazd</span>
@@ -43,12 +43,12 @@
         <a href="https://play.google.com/store/apps/details?id=com.taxity.bluutaxi" data-strength="40" title="Pobierz z Google Play" class="button-app magnetic fade-in">
             <img src="/assets/img/hero/googleplay.png" alt="">
         </a>
-        <a href="https://apps.apple.com/pl/app/bluu-taxi-piaseczno-pra%C5%BCm%C3%B3w/id6504847568?platform=iphone" data-strength="40" title="Pobierz z Appstore" class="button-app magnetic fade-in">
+        <a href="https://apps.apple.com/pl/app/bluu-taxi-piaseczno-pra%C5%BCm%C3%B3w/id6504847568?platform=iphone" data-strength="60" title="Pobierz z Appstore" class="button-app magnetic fade-in">
             <img src="/assets/img/hero/appstore.png" alt="">
         </a>
       </div>
     </div>
-    <div class="offset-md-1 col-md-3">
+    <div class="offset-md-1 col-md-3 d-none d-md-block">
       <img src="/assets/img/hero/app.png" alt="">
     </div>
     </div>
@@ -70,15 +70,21 @@
     right: 0;
     bottom: 0;
     background-color: var(--color-accent-1);
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     opacity: .8;
     z-index: -1;
   }
   .hero-svg {
     padding: .5em .6em .2em;
     width: max-content;
-    border-radius: 25px;
+    border-radius: 35px;
     background: var(--color-light-2);
+  }
+  @media(min-width:767px) {
+    .hero::before {
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
   }
 </style>
