@@ -43,27 +43,6 @@
             {% endfor %}
         </div>
 
-        <div id="opinie"></div>
- 
-        <script>
-        fetch("/.netlify/functions/getGoogleReviews")
-          .then(response => response.json())
-          .then(data => {
-            if (data.result && data.result.reviews) {
-                let opinieHTML = "";
-                data.result.reviews.forEach(opinia => {
-                    opinieHTML += `<div class="opinia">
-                        <p><strong>${opinia.author_name}</strong> ⭐${opinia.rating}/5</p>
-                        <p>"${opinia.text}"</p>
-                    </div>`;
-                });
-                document.getElementById("opinie").innerHTML = opinieHTML;
-            }
-          })
-          .catch(error => console.error("Błąd pobierania opinii:", error));
-        </script>
-        
-
     </div>
 </div>
 </section>

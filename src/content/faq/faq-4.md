@@ -1,4 +1,4 @@
 ---
-title: Czy mogę zapłacić kartą płatniczą? 
-answer: Tak, wszystkie nasze taksówki są wyposażone w terminale płatnicze, które umożliwiają płatność kartą. Akceptujemy wszystkie popularne karty kredytowe i debetowe.
+title: Co zrobić jeżeli zostawiłem/am coś w aucie?
+answer: Skontaktuj się z nami jak najszybciej. Postaramy się pomóc w odnalezieniu zgubionego przedmiotu.
 ---

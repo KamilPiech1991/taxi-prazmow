@@ -1,4 +1,4 @@
 ---
-title: Czy mogę zapłacić kartą płatniczą? 
-answer: Tak, wszystkie nasze taksówki są wyposażone w terminale płatnicze, które umożliwiają płatność kartą. Akceptujemy wszystkie popularne karty kredytowe i debetowe.
+title: Czy mogę zamówić przejazd z wyprzedzeniem?
+answer: Tak, zalecamy zamawianie taksówki z wyprzedzeniem, zwłaszcza jeśli potrzebujesz transportu na ważne wydarzenie lub na lotnisko. Możesz to zrobić przez telefon lub aplikację mobilną.
 ---

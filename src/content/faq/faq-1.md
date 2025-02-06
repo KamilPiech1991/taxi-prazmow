@@ -1,4 +1,4 @@
 ---
-title: Czy mogę zapłacić kartą płatniczą? 
-answer: Tak, wszystkie nasze taksówki są wyposażone w terminale płatnicze, które umożliwiają płatność kartą. Akceptujemy wszystkie popularne karty kredytowe i debetowe.
+title: Jak mogę zamówić przejazd?
+answer: Możesz zamówić taksówkę, dzwoniąc bezpośrednio na nasz numer telefonu 22 247 20 20 lub korzystając z naszej aplikacji mobilnej.
 ---

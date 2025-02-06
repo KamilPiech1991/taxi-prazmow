@@ -2920,7 +2920,7 @@ L.geoJSON(areaGeoJSON, {
   
     // 6. Dopasowujemy widok do WSZYSTKICH obiektów (poligonów i markerów)
     //    Tworzymy FeatureGroup z warstw, które chcemy objąć
-    const allLayersGroup = L.featureGroup([poligonyLayer, markeryLayer]);
+    const allLayersGroup = L.featureGroup([markeryLayer]);
     map.fitBounds(allLayersGroup.getBounds());
   
     // KONIEC
