@@ -169,7 +169,7 @@
 .fixed-button {
   position: fixed;
   bottom: 23px;
-  left: 20px;
+  right: 20px;
   opacity: 0;
   transform: translateY(100px);
   visibility: hidden;
@@ -251,7 +251,7 @@
   position: absolute;
   width: max-content;
   top: 46%;
-  right: -12.3em;
+  left: -11.4em;
   transform: translateY(-50%) scale(0);
   background: #fff;
   padding: 0.8em 2em;
