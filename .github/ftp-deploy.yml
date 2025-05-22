@@ -1,0 +1,45 @@
+name: Build and Deploy via FTP
+
+on:
+  push:
+    branches: [ main ]  # Zmień na nazwę głównej gałęzi, jeśli używasz innej (np. master)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Dostosuj wersję Node.js do wymagań projektu
+        
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build site
+      run: npm run build
+      
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./public/  # Katalog z plikami po buildzie
+        server-dir: /bluetaxi_static/  # Dostosuj do struktury Twojego hostingu
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**

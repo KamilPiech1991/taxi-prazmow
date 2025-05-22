@@ -1,0 +1,28 @@
+.footer-logo {
+  max-width: 200px;
+}
+
+.footer-middle {
+  border-top: 1px solid rgba(153, 153, 153, 0.2);
+  border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.footer-bottom-menu {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.footer-bottom-menu li {
+  margin-bottom: 0;
+  margin-right: 1em;
+  display: inline-block;
+  list-style: none;
+}
+
+.btn-footer {
+  margin-right: 0;
+}
+
+.btn-footer img {
+  height: 38px;
+}
