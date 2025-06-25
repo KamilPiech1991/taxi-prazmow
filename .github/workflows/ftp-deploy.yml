@@ -30,6 +30,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps            # <- WAŻNE
+          port: 21                  # <- upewnij się, że Twój serwer używa tego portu
           local-dir: public/  # Katalog z plikami po buildzie
           server-dir: /bluetaxi_static/  # Dostosuj do struktury Twojego hostingu
       
