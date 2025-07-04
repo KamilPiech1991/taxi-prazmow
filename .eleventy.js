@@ -27,6 +27,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addShortcode("bannerStatic", banner);
     eleventyConfig.addShortcode("lineStatic", lineStatic);
     eleventyConfig.addNunjucksAsyncShortcode("Image", siteImage);
+    eleventyConfig.addNunjucksAsyncShortcode("blogImage", blogImage);
 
     eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
     
@@ -45,6 +46,11 @@ module.exports = function(eleventyConfig) {
             const orderB = b.data.order || 0;
             return orderA - orderB;
           });
+          });
+
+                  // Collection blog
+        eleventyConfig.addCollection('posts', function(collectionApi) {
+          return collectionApi.getFilteredByGlob('src/content/posts/**/*.md').reverse();
           });
 
 
