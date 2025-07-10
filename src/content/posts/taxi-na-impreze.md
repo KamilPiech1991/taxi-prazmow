@@ -4,8 +4,8 @@ description:
 date: 2022-12-05T22:37:34.733Z
 author: Przemek Miros
 tags: 
-  - trendy
-thumbnail: /content/posts/img/prazmow.png
+  - transport
+thumbnail: /content/posts/img/wesele.jpg
 ---
 
 Organizujesz wesele, komunię, chrzciny lub inną uroczystość w gminie Prażmów lub okolicach? A może wybierasz się na imprezę i chcesz bezpiecznie wrócić do domu? Dobrze trafiłeś! Oferujemy **profesjonalny i punktualny transport taxi na imprezy okolicznościowe** – idealny dla mieszkańców Prażmowa, Uwielin, Jaroszowej Woli, Krupiej Wólki czy Woli Prażmowskiej.

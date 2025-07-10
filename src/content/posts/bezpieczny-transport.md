@@ -4,7 +4,7 @@ description:
 date: 2022-12-05T22:37:34.733Z
 author: Przemek Miros
 tags: 
-  - trendy
+  - transport
 thumbnail: /content/posts/img/prazmow.png
 ---
 

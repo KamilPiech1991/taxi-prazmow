@@ -10,74 +10,17 @@ pagination:
 
 <section class="hero pt-large pt-md-xlarge pb-small pb-md-medium" data-scroll-section>
     <div class="container">
-        <div class="row g-4">
-            <div class="col-md-8 col-xl-7">
-                <div class="hero-card hero-card-shape bg-accent-1">
-                    <svg class="hero-card-shape-svg" viewBox="0 0 691 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0V53C0 53 3.96649 35 28.2612 35C52.556 35 570.005 34.98 606.695 34.98C643.385 34.98 651 0 651 0H0Z" fill="var(--color-light-1)" />
-                        <path d="M690.717 0C645.947 0 648.377 21.6981 625.99 29.2453C625.99 29.2453 612.849 0 634.262 0H690.717Z" fill="var(--color-light-1)" />
-                    </svg>
-                    <div class="hero-card-content p-4 py-5 p-md-5">
-                        <p class="h5 fade-in mb-3 mt-2 mt-md-4 color-light">Główna | {{ title }}</p>
+                <div class="hero-card">
+                    <div class="hero-card-content">
+                        <p class="h5 fade-in mb-3 mt-2 mt-md-4">Główna | {{ title }}</p>
                         <h1 class="xxl split-lines my-2 my-md-3 uppercase color-light">Porady i ciekawostki</h1>
                         <div class="line-x my-4"></div>
-                        <div class="row g-3 align-items-center">
-                            <div class="col-3 col-md-2 fade-in">
-                                <img src="/assets/img/hero/avatar.png" class="fade-in" style="width:55px; height:55px;" alt="Przemek Miros - Avatar">
-                            </div>
-                            <div class="col-9 col-md-8">
-                                <p class="h5 my-0 color-light split-lines"> Porady i ciekawostki na temat stron internetowych </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-xl-5 d-none d-md-block">
-                <div class="hero-card bg-dark d-md-flex align-items-center">
-                    <div class="p-2 fade-in">
-                        <video autoplay loop poster="/assets/img/video/movie-5-poster.png">
-                            <source src="/assets/img/video/movie-5.webm">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <section class="pb-xxsmall pb-md-small" data-scroll-section>
     <div class="container">
-        <div class="row gx-2 pb-small d-none d-md-flex justify-content-center fade-in">
-            <div class="col-auto">
-                <a href="/porady/" class="category-btn magnetic link-active" data-strength="50" title="Strony www">
-                    <span class="btn-text">Wszystkie </span>
-                </a>
-            </div>
-            <div class="col-auto">
-                <a href="/porady/strony-www/" class="category-btn magnetic" data-strength="50" title="Strony www">
-                    <span class="btn-text"> Strony www </span>
-                </a>
-            </div>
-            <div class="col-auto">
-                <a href="/porady/pozycjonowanie/" class="category-btn magnetic" data-strength="50" title="Pozycjonowanie">
-                    <span class="btn-text"> Pozycjonowanie </span>
-                </a>
-            </div>
-            <div class="col-auto">
-                <a href="/porady/marketing/" class="category-btn magnetic" data-strength="50" title="Marketing">
-                    <span class="btn-text"> Marketing </span>
-                </a>
-            </div>
-            <div class="col-auto">
-                <a href="/porady/wordpress/" class="category-btn magnetic" data-strength="50" title="Wordpress">
-                    <span class="btn-text"> Wordpress </span>
-                </a>
-            </div>
-            <div class="col-auto">
-                <a href="/porady/poradniki/" class="category-btn magnetic" data-strength="50" title="Wordpress">
-                    <span class="btn-text"> Poradniki </span>
-                </a>
-            </div>
-        </div>
         <div class="row gx-4 fade-in"> 
           {% for post in blog %} 
               <div class="col-sm-6 col-lg-4 pb-xsmall">
