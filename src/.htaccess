@@ -1,0 +1,29 @@
+# Włącz podążanie za symbolicznymi linkami
+Options +FollowSymLinks
+
+# Zabroń wyświetlania listy katalogów
+Options -Indexes
+
+# Ustaw domyślną stronę startową dla katalogów
+DirectoryIndex index.html
+
+# Zezwól na dostęp do wszystkich plików (chyba że ustawiono inaczej)
+<FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot|json|txt|xml|pdf)$">
+    Require all granted
+</FilesMatch>
+
+# Ustaw kodowanie UTF-8
+AddDefaultCharset utf-8
+
+# Ustaw odpowiedni typ MIME dla JSON
+AddType application/json .json
+
+# Ewentualne przekierowanie na HTTPS (opcjonalnie)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# (opcjonalnie) Włączenie GZIP — wymaga mod_deflate
+# <IfModule mod_deflate.c>
+#   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+# </IfModule>
