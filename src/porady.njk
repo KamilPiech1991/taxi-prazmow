@@ -1,6 +1,7 @@
 --- 
 layout: "layouts/base.njk"
 title: Porady
+permalink: /porady/
 description: Artykuły i ciekawostki 
 pagination: 
     data: collections.posts 
@@ -16,12 +17,12 @@ pagination:
                         <h1 class="xxl split-lines my-2 my-md-3 uppercase color-light">Porady i ciekawostki</h1>
                         <div class="line-x my-4"></div>
                     </div>
-                </div>
+                </div> 
     </div>
 </section>
 <section class="pb-xxsmall pb-md-small" data-scroll-section>
-    <div class="container">
-        <div class="row gx-4 fade-in"> 
+    <div class="container"> 
+        <div class="row gx-4 fade-in">  
           {% for post in blog %} 
               <div class="col-sm-6 col-lg-4 pb-xsmall">
                 <div class="post-card">
